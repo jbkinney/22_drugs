@@ -14,9 +14,6 @@ data/
         psi_elp1_dmso.csv       # Fig. S4
         psi_elp1_rg.csv         # Fig. S4
         psi_elp1_nvs.csv        # Fig. S4
-        psi_brca2_dmso.csv      # Fig. S4
-        psi_brca2_rg.csv        # Fig. S4
-        psi_brca2_nvs.csv       # Fig. S4
     qPCR/
         dose_response_curves.xlsx       # Fig. 5E-L, 6A-K
         linear_mixture_curves.xlsx      # Fig. 6L-O
