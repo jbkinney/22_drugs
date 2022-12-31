@@ -24,7 +24,7 @@ data/
 
 fig1/
     fig1D-I_S1_S2_S3_S5_S8.ipynb        # SMN2 MPSA analysis
-    figS4.ipynb                         # ELP1, BRCA2 MPSA analysis
+    figS4.ipynb                         # ELP1 MPSA analysis
 
 fig2/
     fig2BDE_S7.ipynb   # allelic manifolds, effect scatter, hyp min* motif
