@@ -14,9 +14,6 @@ data/
         psi_elp1_dmso.csv       # Fig. S4
         psi_elp1_rg.csv         # Fig. S4
         psi_elp1_nvs.csv        # Fig. S4
-        psi_brca2_dmso.csv      # Fig. S4
-        psi_brca2_rg.csv        # Fig. S4
-        psi_brca2_nvs.csv       # Fig. S4
     qPCR/
         dose_response_curves.xlsx       # Fig. 5E-L, 6A-K
         linear_mixture_curves.xlsx      # Fig. 6L-O
@@ -27,7 +24,7 @@ data/
 
 fig1/
     fig1D-I_S1_S2_S3_S5_S8.ipynb        # SMN2 MPSA analysis
-    figS4.ipynb                         # ELP1, BRCA2 MPSA analysis
+    figS4.ipynb                         # ELP1 MPSA analysis
 
 fig2/
     fig2BDE_S7.ipynb   # allelic manifolds, effect scatter, hyp min* motif
