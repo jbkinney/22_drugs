@@ -1,9 +1,9 @@
-# pipeline_mpsa
-FASTQ processing pipeline for massively parallel splicing assays (MPSAs)
+# Cluster analysis [UNDER CONSTRUCTION]
 
-For information check the [wikipage](https://github.com/jbkinney/pipeline_mpsa/wiki).
+Directory contains scripts used process raw Illumina sequencing data (in the form of `.fastq.gz` files) from the MPSA experiments, thereby yielding the `.csv` in `../local/data/mpsa`. Note: these scripts are designed to run on Elzar (the High Performance Compute Cluster at Cold Spring Harbor Laboratory), and will likely have to be adapted to run in your environtment.
 
---- 
-##### Note
-
-*The `.gitignore` file designed to ignore all files. To add new files and directory to git version control use `git add -f`*
+To process these data, execute
+```
+$ python run_pipeline analysis_smn2/
+$ python run_pipeline analysis_elp1/
+```
