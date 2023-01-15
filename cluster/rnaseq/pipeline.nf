@@ -118,11 +118,11 @@ process build_star_index{
     path gtf from gtf_ch2
 
     output:
-    path "index" into index_ch
+    val "$ref_dir/index" into index_ch
 
     """
     mkdir star_index
-    STAR --runThreadN 2 --runMode genomeGenerate --genomeDir index\
+    STAR --runThreadN 2 --runMode genomeGenerate --genomeDir $ref_dir/index\
          --genomeFastaFiles $fasta --sjdbGTFfile $gtf\
          --sjdbOverhang $read_length\
     """
@@ -143,7 +143,7 @@ process star_map{
 
     input:
     val sample from samples_to_map
-    path index from index_ch
+    val index from index_ch
 
     output:
     val "${bam_dir}/${sample}" into bams_ch
