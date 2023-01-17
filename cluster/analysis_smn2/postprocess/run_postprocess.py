@@ -1,0 +1,18 @@
+import subprocess
+print('')
+print("<----- Make Cipher Files ----->")
+subprocess.call(['python','make_ciphers.py'])
+print('')
+print('')
+print('')
+print("<----- Merge Cipher Files for Libraries ----->")
+subprocess.call(['python','merge_libraries_for_ssbc.py'])
+print('')
+print('')
+print("<----- Make Result Files ----->")
+subprocess.call(['python','make_results.py'])
+print('')
+print('')
+print("<----- Make Report Files ----->")
+subprocess.call(['python','make_reports.py'])
+
