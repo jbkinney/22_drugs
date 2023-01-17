@@ -24,13 +24,14 @@ for unique_exp in experiment.unique():
     files = post_process['file'][experiment==unique_exp]
     # Find the library file
     library_file= files[sample_type=='cipher'].values[0]
+    library_file=cipher_dir+'/'+library_file
     library_df  = pd.read_csv(library_file, delim_whitespace=True, header=0)
     library_df  = library_df[['bc','ss','ct','otherct']].\
             rename(columns={'ct':'lib_ct','otherct':'mis_ct'})
 
     print('--> Processing the experiment {}'.format(unique_exp)) 
     # Find the barcode libraries
-    bc_files     = files[sample_type!='cipher']
+    bc_files     = cipher_dir+'/'+files[sample_type!='cipher']
     bc_types     = sample_type[bc_files.index]
     out_string =  'library_file:\t%s\n'%unique_exp
     bc_dfs = []
