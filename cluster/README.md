@@ -12,7 +12,7 @@ $ python postprocess/make_results.py
 Similarly, to process the ELP1 data, execute
 ```
 $ python run_pipeline analysis_elp1/
-$ cd analysis_smn2
+$ cd analysis_elp1
 $ python postprocess/make_ciphers.py
 $ python postprocess/make_results.py
 ```
