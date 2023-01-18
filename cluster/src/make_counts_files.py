@@ -54,9 +54,12 @@ tmp_df = pd.DataFrame()
 for in_file in in_file_list:
     # Load input file as data frame
     in_df = pd.read_csv(in_file, sep='\t')
-    tmp_df = tmp_df.append(in_df[in_df['sample']==sample],
-                           ignore_index=True,
-                           sort=False)
+    #tmp_df = tmp_df.append(in_df[in_df['sample']==sample],
+    #                       ignore_index=True,
+    #                       sort=False)
+    tmp_df = pd.concat([tmp_df, in_df[in_df['sample']==sample]],
+                       ignore_index=True,
+                       sort=False)
 
 # Get the column name, ignore the 'sample' name
 cols = list(tmp_df)
