@@ -9,15 +9,11 @@ path_to_dir = args.data_dir+"/postprocess/"
 sys.path.append(path_to_dir)
 from post_process_input import *
 
-print('')
-print("<----- Make Cipher Files ----->")
+print("\n<----- Make Cipher Files ----->\n")
 subprocess.call(['python',path_to_dir+'make_ciphers.py'])
-print('')
-print('')
-print("<----- Make Result Files ----->")
+print("\n<----- Make Result Files ----->\n")
 subprocess.call(['python',path_to_dir+'make_results.py'])
-print('')
-print('')
-print("<----- Make Report Files ----->")
+print("\n<----- Make Report Files ----->\n")
 subprocess.call(['python',path_to_dir+'make_reports.py'])
-
+print("\n<----- Make PSI Files ----->\n")
+subprocess.call(['python',path_to_dir+'make_psi.py'])
