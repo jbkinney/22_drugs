@@ -1,13 +1,14 @@
+import os 
 import pandas as pd
 from metadata import *
 import numpy as np
 from datetime import date
 today = date.today()
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
-
-metadata_file    = '/grid/kinney/home/kooshkb/pipeline_mpsa/ikbkap_drug_110321/ikbkap_drug_110321.xlsx'
-count_file_dir   = '/grid/kinney/home/kooshkb/pipeline_mpsa/ikbkap_drug_110321/intermediate/counts/'
-report_file_dir  = '/grid/kinney/home/kooshkb/pipeline_mpsa/ikbkap_drug_110321/intermediate/reports'
-cipher_dir     = './cipher'
-results_dir    = './results_'+str(today)
-report_file    = '../report_'+str(today)+'.csv'
+metadata_file    = dir_path + '/../metadata_elp1.xlsx'
+count_file_dir   = dir_path + '/../intermediate/counts'
+report_file_dir  = dir_path + '/../intermediate/reports'
+cipher_dir       = dir_path + '/cipher'
+results_dir      = dir_path + '/results_'+str(today)
+report_file      = dir_path + '/report_'+str(today)+'.csv'
