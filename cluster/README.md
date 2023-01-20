@@ -13,8 +13,9 @@ Note that final step in the postprocess script, is calculating the psi values. S
 
 Similarly, to process the ELP1 data, execute
 ```
-$ python run_pipeline analysis_elp1/
-$ cd analysis_elp1
-$ python postprocess/make_ciphers.py
-$ python postprocess/make_results.py
+$ python run_pipeline.py analysis_elp1
+$ python run_postprocess.py analysis_elp1
 ```
+The barcode-splice site libraries for the IKBKAP (ELP1) is borrowed from 
+
+Wong, Mandy S., Justin B. Kinney, and Adrian R. Krainer. "Quantitative activity profile and context dependence of all human 5′ splice sites." Molecular cell 71.6 (2018): 1012-1026.

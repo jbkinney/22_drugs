@@ -1,3 +1,5 @@
 intermediate/*
+postprocess/cipher/*
+postprocess/results_*/*
+postprocess/report_*
 tmp/*
-report*
