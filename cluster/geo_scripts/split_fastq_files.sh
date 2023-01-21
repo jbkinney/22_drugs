@@ -1,6 +1,6 @@
 #/bin/bash
-#pip install --upgrade pip
-#pip install --upgrade niet
+pip install -q --upgrade pip
+pip install -q --upgrade niet
 
 # YAML file
 YAML_FILE="smn2_info.yaml"
