@@ -1,5 +1,8 @@
 from post_process_input import *
 
+if not os.path.isdir(psi_dir):
+    utils.clean_dir(psi_dir)
+
 print('\n==> Process Results Datasets')
 # Load all ratios into a single dataframe
 for context in ['nvs', 'dmso', 'rg']:
@@ -37,8 +40,8 @@ for context in ['nvs', 'dmso', 'rg']:
     splice_df.columns=['splice_site']
     psi_df = psi_df[psi_df.index.isin(set(splice_df['splice_site']))]
     tot_df = tot_df[tot_df.index.isin(set(splice_df['splice_site']))]
-    psi_file = dir_path+f'/psi_smn2_{context}.csv'
-    tot_file = dir_path+f'/total_smn2_{context}.csv'
+    psi_file = psi_dir+f'/psi_smn2_{context}.csv'
+    tot_file = psi_dir+f'/total_smn2_{context}.csv'
     print(f'\n ==> writing the psi file {psi_file} \n')
     psi_df.to_csv(psi_file, sep=',', na_rep='NaN')
     tot_df.to_csv(tot_file, sep=',', na_rep='NaN')
