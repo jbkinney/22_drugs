@@ -12,9 +12,9 @@ smn2_lib:
         - TCTGAGC
         - CGGATTCAG
     read1:
-        - 306771_ssbc_S1_R1_001.fastq.gz
+        306771_ssbc_S1_R1_001.fastq.gz
     read2:
-        - 306771_ssbc_S1_R2_001.fastq.gz
+        306771_ssbc_S1_R2_001.fastq.gz
 
 smn2_dmso:
     lid:
@@ -59,6 +59,8 @@ smn2_dmso:
         - CATGTCATG
     read1:
         SMN2_DMSO_S1_R1_001.fastq.gz
+    read2:
+        NONE
 
 smn2_nvs:
     lid:
@@ -103,6 +105,8 @@ smn2_nvs:
         - CATGTCATG
     read1:
         SMN2-NVS-SMA_S1_R1_001.fastq.gz
+    read2:
+        NONE
 
 smn2_rg:
     lid:
@@ -147,3 +151,5 @@ smn2_rg:
         - CATGTCATG
     read1:
         SMN2-RG7916_S1_R1_001.fastq.gz
+    read2:
+        NONE
