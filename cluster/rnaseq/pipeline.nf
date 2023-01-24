@@ -13,8 +13,8 @@ qc_dir = "$cwd/qc"
 data = "data.csv"
 controls = "control_bams"
 treated = "treated_bams"
-design = "design.csv"
-design_pred = "new_design_pred.csv"
+design = "$cwd/design.csv"
+design_pred = "$cwd/new_design_pred.csv"
 psi = "psi"
 
 /* Other settings */
@@ -184,10 +184,10 @@ process get_control_bamnames{
     conda '/grid/mccandlish/home_norepl/martigo/miniconda3/envs/as_quant'
 
     output:
-    val "control.txt" into control_bams
+    val "$cwd/control.txt" into control_bams
 
     """
-    python get_bam_names.py "control"
+    python "$cwd/get_bam_names.py" "control"
     """
 }
 
@@ -197,10 +197,10 @@ process get_treated_bamnames{
     conda '/grid/mccandlish/home_norepl/martigo/miniconda3/envs/as_quant'
 
     output:
-    val "treated.txt" into treated_bams
+    val "$cwd/treated.txt" into treated_bams
 
     """
-    python get_bam_names.py "treated"
+    python "$cwd/get_bam_names.py" "treated"
     """
 }
 
@@ -228,6 +228,17 @@ process run_rmats {
     """
 }
 
+process get_sample_names {
+
+    output:
+    path "sample_names" into sample_names_ch
+
+    """
+    cut -f 1 -d',' $design | grep -v "sample" > "sample_names"
+    """
+
+}
+
 
 process parse_exon_skipping {
 
@@ -237,12 +248,13 @@ process parse_exon_skipping {
 
     input:
     val rmats_out from rmats_output
+    path sample_names from sample_names_ch
 
     output:
     val "${counts_dir}/exon_skipping" into exon_skipping_counts_ch
 
     """
-    parse_counts $rmats_out -p "rmats" -s "${project_dir}/sample_names" -e "exon_skipping" -o "${counts_dir}/exon_skipping"
+    parse_counts $rmats_out -p "rmats" -s "$sample_names" -e "exon_skipping" -o "${counts_dir}/exon_skipping"
     """
 }
 
@@ -292,7 +304,7 @@ process get_5ss_sequences {
     path "exons.5ss.csv" into exon_5ss_seqs_ch
     
     """
-    python get_5ss_seqs.py $fasta $counts "exons.5ss.csv"
+    python "$cwd/get_5ss_seqs.py" $fasta $counts "exons.5ss.csv"
     """
 
 }
@@ -312,7 +324,7 @@ process infer_allelic_manifolds{
     val "allelic_manifolds.csv" into fits_ch
         
     """
-    python fit_5ss_model.py $counts $exon_5ss_seqs $design "allelic_manifolds.csv"
+    python "$cwd/fit_5ss_model.py" $counts $exon_5ss_seqs $design "allelic_manifolds.csv"
     """
 }
 
