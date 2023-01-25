@@ -6,13 +6,36 @@ It employs a general pipeline to count reads mapping to alternative splicing eve
 
 ### Dependencies
 
-
-
-### Run
-
-The pipeline downloads genome references and data directly and performs all analysis automatically by just running
+Create a new python environment and install the package manually for [AS_quant](https://bitbucket.org/cmartiga/as_quant/src)
 
 ```bash
+conda create -n as_quant python=3.7
+git clone git@bitbucket.org:cmartiga/as_quant.git
+cd as_quant
+python setup.py install
+```
+
+Create other environments for the other tools. It may take some time to solve all the dependencies
+
+```bash
+conda create -f environment.yml
+```
+
+### Download raw data
+
+Download the data prior to running the analysis
+
+```bash
+cd fastq
+bash download.sh
+```
+
+### Run the pipeline
+
+The pipeline downloads genome references directly and performs all analysis automatically by just running
+
+```bash
+conda activate nextflow
 nextflow pipeline.nf
 ```
 

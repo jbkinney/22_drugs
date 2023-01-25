@@ -1,0 +1,12 @@
+name: as-pipeline
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - star=2.7.8a
+  - rseqc=4.0.0
+  - fastqc=0.11.9
+  - rmats=4.1.0
+  - gffread=0.12.1
+  - multiqc
