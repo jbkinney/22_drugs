@@ -14,7 +14,7 @@ data = "data.csv"
 controls = "control_bams"
 treated = "treated_bams"
 design = "$cwd/design.csv"
-design_pred = "$cwd/new_design_pred.csv"
+design_pred = "$cwd/design_pred.csv"
 psi = "psi"
 
 /* Other settings */
@@ -296,6 +296,8 @@ process infer_exon_psis {
 
 process get_5ss_sequences {
 
+    conda '/grid/mccandlish/home_norepl/martigo/miniconda3/envs/as_quant'
+
     input:
     path fasta from fastafile_ch1
     val counts from filtered_exon_counts_ch3
@@ -304,7 +306,7 @@ process get_5ss_sequences {
     path "exons.5ss.csv" into exon_5ss_seqs_ch
     
     """
-    python "$cwd/get_5ss_seqs.py" $fasta $counts "exons.5ss.csv"
+    python "$cwd/get_5ss_seqs.py" $fasta "${counts}.total.csv" "exons.5ss.csv"
     """
 
 }
