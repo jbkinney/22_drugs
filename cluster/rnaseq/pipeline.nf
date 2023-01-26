@@ -306,7 +306,7 @@ process get_5ss_sequences {
     path "exons.5ss.csv" into exon_5ss_seqs_ch
     
     """
-    python "$cwd/get_5ss_seqs.py" $fasta "${counts}.total.csv" "exons.5ss.csv"
+    python "$cwd/get_5ss_seqs.py" $fasta "${counts}.total.csv" "$exons.5ss.csv"
     """
 
 }
@@ -322,11 +322,8 @@ process infer_allelic_manifolds{
     val counts from filtered_exon_counts_ch3
     val exon_5ss_seqs from exon_5ss_seqs_ch
     
-    output:
-    val "allelic_manifolds.csv" into fits_ch
-        
     """
-    python "$cwd/fit_5ss_model.py" $counts $exon_5ss_seqs $design "allelic_manifolds.csv"
+    python "$cwd/fit_5ss_model.py" $counts $exon_5ss_seqs $design "$cwd/allelic_manifolds.csv"
     """
 }
 
