@@ -11,8 +11,6 @@ qc_dir = "$cwd/qc"
 
 /* Files */
 data = "data.csv"
-controls = "control_bams"
-treated = "treated_bams"
 design = "$cwd/design.csv"
 design_pred = "$cwd/design_pred.csv"
 psi = "psi"
