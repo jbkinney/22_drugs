@@ -3,6 +3,9 @@ from post_process_input import *
 # Names in the manuscript is different
 # ikbkap -> elp
 
+if not os.path.isdir(psi_dir):
+    utils.clean_dir(psi_dir)
+
 drug_name = ['dmso', 'rg', 'nvs']
 
 print('\n==> Process Results Datasets')
@@ -30,8 +33,8 @@ for k, context in enumerate(['dmso', 'rg', 'nvssm']):
             col = f'ikbkap_select_lib{lib_num}_rep{rep_num}'
             tot_df[col] = ss_df['tot_ct']
     drug = drug_name[k]
-    psi_file = dir_path+f'/psi_elp1_{drug}.csv'
-    tot_file = dir_path+f'/total_elp1_{drug}.csv'
+    psi_file = psi_dir+f'/psi_elp1_{drug}.csv'
+    tot_file = psi_dir+f'/total_elp1_{drug}.csv'
     print(f'\n ==> writing the psi file {psi_file} \n')
     psi_df.to_csv(psi_file, sep=',', na_rep='NaN')
     tot_df.to_csv(tot_file, sep=',', na_rep='NaN')

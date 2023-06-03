@@ -1,0 +1,155 @@
+illumina_dir : "/grid/kinney/home/jkinney/big_data/illumina_runs/"
+
+smn2_lib:
+    lid:
+        306771
+    samples:
+        - smn2_ssbc_lib1
+        - smn2_ssbc_lib4
+        - smn2_ssbc_lib6
+    barcodes:
+        - TAAGTGGCGC
+        - TCTGAGC
+        - CGGATTCAG
+    read1:
+        306771_ssbc_S1_R1_001.fastq.gz
+    read2:
+        306771_ssbc_S1_R2_001.fastq.gz
+
+smn2_dmso:
+    lid:
+       307174
+    samples:
+        - smn2_dmso_lib1_rep1_tot
+        - smn2_dmso_lib1_rep2_tot
+        - smn2_dmso_lib1_rep3_tot
+        - smn2_dmso_lib2_rep1_tot
+        - smn2_dmso_lib2_rep2_tot
+        - smn2_dmso_lib2_rep3_tot
+        - smn2_dmso_lib3_rep1_tot
+        - smn2_dmso_lib3_rep2_tot
+        - smn2_dmso_lib3_rep3_tot
+        - smn2_dmso_lib1_rep1_in
+        - smn2_dmso_lib1_rep2_in
+        - smn2_dmso_lib1_rep3_in
+        - smn2_dmso_lib2_rep1_in
+        - smn2_dmso_lib2_rep2_in
+        - smn2_dmso_lib2_rep3_in
+        - smn2_dmso_lib3_rep1_in
+        - smn2_dmso_lib3_rep2_in
+        - smn2_dmso_lib3_rep3_in
+    barcodes:
+        - TAAGTGGCGC
+        - CCATGCCAC
+        - AAGCATCA
+        - TCTGAGC
+        - AACTAAGCCT
+        - CGGATTCAG
+        - CCAGCGCT
+        - GACGTCA
+        - ATACAACAGC
+        - CGACTAGGT
+        - TACGATCG
+        - CCTAATG
+        - GCATAGTCCA
+        - TGCTATTAG
+        - AACGATGT
+        - CTTCAGG
+        - TGCAGCACTC
+        - CATGTCATG
+    read1:
+        SMN2_DMSO_S1_R1_001.fastq.gz
+    read2:
+        NONE
+
+smn2_nvs:
+    lid:
+        307175
+    samples:
+        - smn2_nvs_lib1_rep1_tot
+        - smn2_nvs_lib1_rep2_tot
+        - smn2_nvs_lib1_rep3_tot
+        - smn2_nvs_lib2_rep1_tot
+        - smn2_nvs_lib2_rep2_tot
+        - smn2_nvs_lib2_rep3_tot
+        - smn2_nvs_lib3_rep1_tot
+        - smn2_nvs_lib3_rep2_tot
+        - smn2_nvs_lib3_rep3_tot
+        - smn2_nvs_lib1_rep1_in
+        - smn2_nvs_lib1_rep2_in
+        - smn2_nvs_lib1_rep3_in
+        - smn2_nvs_lib2_rep1_in
+        - smn2_nvs_lib2_rep2_in
+        - smn2_nvs_lib2_rep3_in
+        - smn2_nvs_lib3_rep1_in
+        - smn2_nvs_lib3_rep2_in
+        - smn2_nvs_lib3_rep3_in
+    barcodes:
+        - TAAGTGGCGC
+        - CCATGCCAC
+        - AAGCATCA
+        - TCTGAGC
+        - AACTAAGCCT
+        - CGGATTCAG
+        - CCAGCGCT
+        - GACGTCA
+        - ATACAACAGC
+        - CGACTAGGT
+        - TACGATCG
+        - CCTAATG
+        - GCATAGTCCA
+        - TGCTATTAG
+        - AACGATGT
+        - CTTCAGG
+        - TGCAGCACTC
+        - CATGTCATG
+    read1:
+        SMN2-NVS-SMA_S1_R1_001.fastq.gz
+    read2:
+        NONE
+
+smn2_rg:
+    lid:
+        307176
+    samples:
+        - smn2_rg_lib1_rep1_tot
+        - smn2_rg_lib1_rep2_tot
+        - smn2_rg_lib1_rep3_tot
+        - smn2_rg_lib2_rep1_tot
+        - smn2_rg_lib2_rep2_tot
+        - smn2_rg_lib2_rep3_tot
+        - smn2_rg_lib3_rep1_tot
+        - smn2_rg_lib3_rep2_tot
+        - smn2_rg_lib3_rep3_tot
+        - smn2_rg_lib1_rep1_in
+        - smn2_rg_lib1_rep2_in
+        - smn2_rg_lib1_rep3_in
+        - smn2_rg_lib2_rep1_in
+        - smn2_rg_lib2_rep2_in
+        - smn2_rg_lib2_rep3_in
+        - smn2_rg_lib3_rep1_in
+        - smn2_rg_lib3_rep2_in
+        - smn2_rg_lib3_rep3_in
+    barcodes:
+        - TAAGTGGCGC
+        - CCATGCCAC
+        - AAGCATCA
+        - TCTGAGC
+        - AACTAAGCCT
+        - CGGATTCAG
+        - CCAGCGCT
+        - GACGTCA
+        - ATACAACAGC
+        - CGACTAGGT
+        - TACGATCG
+        - CCTAATG
+        - GCATAGTCCA
+        - TGCTATTAG
+        - AACGATGT
+        - CTTCAGG
+        - TGCAGCACTC
+        - CATGTCATG
+    read1:
+        SMN2-RG7916_S1_R1_001.fastq.gz
+    read2:
+        NONE

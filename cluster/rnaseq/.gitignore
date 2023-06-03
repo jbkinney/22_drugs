@@ -1,0 +1,8 @@
+qc
+fastq
+bam
+counts
+work
+reference
+rmats
+.nextflow*
